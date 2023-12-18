@@ -36,7 +36,7 @@ const createCard = (element) => {
 // ===============
 const delCard = async (Id) => {
     try {
-        const delById = await fetch(`${API_URL}/${Id}`, {
+        const res = await fetch(`${API_URL}/${Id}`, {
             method: 'DELETE',
         })
         .then(res => res.json())
